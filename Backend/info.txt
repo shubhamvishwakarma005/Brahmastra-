@@ -1,0 +1,13 @@
+This is Backend folder in which the node.js, express.js internals will be stored 
+
+# flow :-  (node.js + Express) ==> Middleware =>Route => Controller =>DB (mogo.db/sql )
+
+# To initialise typescript
+tsc --init   
+
+# To run '.ts' file and compile into '.js' file
+tsc -p . 
+
+# To install .gitignore autosetup file
+npx gitignore node
+
