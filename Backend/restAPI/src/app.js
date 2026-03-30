@@ -5,4 +5,4 @@ app.use(express.json())
 
 
 
-export default 
+export default app
