@@ -58,7 +58,7 @@ function greet(name) {
 // *****************Copy******************************
 
 // **** INDEPENDENT COPY *****  
-// the copy element will not affect original || or duplicate while changes
+// the copy element will not affect original || or duplicate while copy 
 
 // copy by value 
 let orig = 100; 

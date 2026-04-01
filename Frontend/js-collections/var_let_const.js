@@ -18,7 +18,7 @@ function chaido() {
 }
 
 
-// function levle scope  || 
+// function level scope  || 
 function chaido() {
     if (true) {
         var chai = 'green tea'
@@ -70,3 +70,8 @@ info.nikName.push('kanha') // only performing operation on values is possible
 
 
 
+// Diffrence between let, var and const 
+// let, var and const are the keyword in js, using which the variable declearation will be possible , so the basic diffrence between them is 
+// let has block level scope because of that it only allow reassign the value not redeclearation 
+// const also has block-level scope which do not allow re-assign and re-declearation 
+// var has function level scope which allow variable access outside the loop and object but because it has function scope we do not able to acces the variable outside the function . 

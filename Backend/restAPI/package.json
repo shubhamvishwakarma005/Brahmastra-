@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^17.3.1",
+    "joi": "^18.1.2",
     "mongoose": "^9.3.3"
   }
 }
