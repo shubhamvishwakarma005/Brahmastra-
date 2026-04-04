@@ -10,7 +10,7 @@ class apiError extends Error {
         return new apiError(400, message)
     }
 
-    static badRequest(message= "unauthourized"){
+    static unauthourized(message= "unauthourized"){
         return new apiError(403, unauthourized)
     }
 }
