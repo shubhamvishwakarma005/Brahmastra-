@@ -1,0 +1,85 @@
+CREATE TABLE ipl_players(
+    players_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    team VARCHAR(50),
+    role VARCHAR(50),
+    run_scored INT CHECK (run_scored >= 0),
+    wicket_taken INT CHECK (wicket_taken >= 0),
+    auction_price INT,
+    
+);
+
+add column:
+ALTER TABLE ipl_players
+ADD COLUMN nickname VARCHAR(50);
+
+select all:
+SELECT * FROM ipl_players;
+
+Specific column:
+SELECT name, nickname, team FROM ipl_players;
+
+
+filterring:
+SELECT * FROM ipl_players WHERE team = 'team name'
+
+SELECT name, nickname,auction_price * FROM ipl_players WHERE auction_price > 10;
+
+logical operation (AND, OR):
+SELECT * FROM ipl_players WHERE wicket_taken >=10 AND role ='all_rounder'
+
+SELECT * FROM ipl_players WHERE team = 'team' OR team = 'team';
+
+
+pattern matching:
+name 3rd letter is a 
+SELECT * FROM ipl_players WHERE name LIKE '__a%'; 
+
+SELECT * FROM ipl_players WHERE team IN ('team');
+
+SELECT * FROM ipl_players WHERE auction_price BETWEEN 10 AND 15;
+
+SELECT * FROM ipl_players WHERE team != 'team';
+
+
+sorting
+SELECT name, nickname, auction_price 
+FROM ipl_players
+ORDER BY auction_price DESC,
+
+
+SELECT name, nickname, auction_price 
+FROM ipl_players
+ORDER BY team ASC, auction_price DESC;
+
+
+pagination:
+SELECT name, nickname, auction_price 
+FROM ipl_players
+ORDER BY  auction_price DESC
+LIMIT 3;
+
+
+SELECT name, nickname, auction_price 
+FROM ipl_players
+ORDER BY  auction_price DESC
+LIMIT 100 OFFSET 3;
+
+
+modifying data in runtime:
+SELECT 
+    name, nickname, auction_price, 
+    (auction_price * 100) AS price_in_lakhs
+FROM ipl_players;
+
+SELECT 
+    name, nickname, (auction_price_crores + 2 ) as new_price
+FROM ipl_players;
+
+
+how you can get distinct values:
+
+SELECT distinct role FROM ipl_players;  // show all distinct values 
+
+Q:What is DQL?
+Data Query Language .

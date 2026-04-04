@@ -1,0 +1,25 @@
+CREATE TABLE watches_collection(
+
+)
+
+SELECT COUNT(*) FROM watches_collection;
+
+SELECT SUM(unit_sold * price_per_unit) AS total_revenue FROM watches_collection;
+
+SELECT AVG(price_per_unit) AS avg_price_unit FROM watches_collection;
+
+SELECT MAX(price_per_unit) AS chepest FROM watches_collection;
+
+SELECT MIN(price_per_unit) AS expensive FROM watches_collection;
+
+
+group by:
+SELECT bran, SUM(unit_sold) AS total_unit_sold
+FROM watches_collection
+GROUP BY brand
+ORDER BY total_unit_sold DESC;
+
+
+
+
+

@@ -1,0 +1,43 @@
+CREATE TABLE canteen_menu(
+    item_id SERIAL PRIMARY KEY,
+    item_name VARCHAR(100),
+    category VARCHAR(50),
+    price INT,
+    is_available BOOLEAN DEFAULT TRUE
+)
+
+insert data :
+INSERT INTO canteen_menu
+(item_name, category, price)
+('masala-chai', 'Beverages', 10)
+('vada pav', 'snacks', 15)
+('samosa ', 'snacks', 20)
+
+update :
+UPDATE canteen_menu 
+SET price = 20
+WHERE item_name = 'vada pav'
+
+UPDATE canteen_menu
+SET price = price - 5
+WHERE category - Beverages;
+
+UPDATE canteen_menu
+SET is_available = FALSE
+WHERE item_name = 'samosa'
+
+UPDATE canteen_menu
+SET is_available = FALSE, price = 10
+WHERE item_name = 'samosa'
+
+
+delete:
+DELETE FROM canteen_menu
+WHERE item_name = 'masala chai'
+
+SELECT * FROM canteen_menu;
+
+
+
+What is DML ?
+Data Manipulation Language
