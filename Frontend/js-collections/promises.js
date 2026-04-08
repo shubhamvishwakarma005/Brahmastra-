@@ -39,10 +39,10 @@ setTimeout(() => {
 //*************************async await********************
 
 
-async function name(params) {
-    try {
+// async function name(params) {
+//     try {
 
-    } catch () {
+//     } catch () {
 
-    }
-}
+//     }
+// }
