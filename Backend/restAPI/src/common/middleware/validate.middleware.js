@@ -1,3 +1,14 @@
-import apiError from "../utils/api.Error";
+import apiError from "../utils/api.Error.js";
 
-apiError
+const validate = (Dtoclass) =>{
+    return (req, res, next)=>{
+      const {error, value} = Dtoclass.validate(req.body)
+      if(error){
+        throw apiError.badRequest(error.join("; "))
+      }
+      req.body = value
+      next()
+    }
+}
+
+export default validate
