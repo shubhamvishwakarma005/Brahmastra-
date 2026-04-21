@@ -36,10 +36,37 @@ function multipleNum(...nums) {
 
 // ******************* Destructuring ************************
 const user = {
-    name: "rahul",
-    age: 25,
-    city: "Delhi"
+    name: "sweety",
+    age: 18,
+    // city: "kalimanda"
 };
 
-const { name: userName, age: userAge } = user
-console.log(userName, userAge);
+const {name:UserName} = user
+// console.log(UserName);
+
+const {age:Umar} = user
+// console.log(Umar)
+
+// const {name, city} = user
+
+
+const sweetyNames = function(...names){
+    return names
+}
+
+
+sweetyNames("sweety", "bagdi", "pagli", "mukti").forEach(element => {
+    // console.log(element)
+});
+
+const user_02 = {
+  name: "rahul",
+  address: {
+    state: "MH",
+    city: "Mumbai"
+  }
+};
+
+const {user_02: {}} = {...user}
+
+console.log(city);

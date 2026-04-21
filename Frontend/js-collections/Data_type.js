@@ -44,6 +44,7 @@ const Car = {
 // Array 
 const Biscuits = ["Mari", "Gooday", "Crack-jack", "Crackers"]
 // console.log("Value :", Biscuits, "||", "Typeof :",  typeof Biscuits)
+// console.log(Array.isArray(Biscuits))
 
 
 // function 
