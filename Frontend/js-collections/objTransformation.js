@@ -13,7 +13,7 @@ const entries = Object.entries(specialUnit)
 // console.log(entries)
 
 
-// operation on object 
+// operation on object  
 // Object.freeze(specialUnit)
 // Object.seal(specialUnit)
 // specialUnit.rank = "UN454544";
