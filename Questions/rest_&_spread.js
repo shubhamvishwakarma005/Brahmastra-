@@ -67,6 +67,6 @@ const user_02 = {
   }
 };
 
-const {user_02: {}} = {...user}
+// const {user_02: {}} = {...user}
 
-console.log(city);
+// console.log(city);
