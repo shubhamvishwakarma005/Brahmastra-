@@ -8,51 +8,17 @@ const students = [
 ];
 
 function DisplayElmt() {
+
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 2fr))",
-        gap: "20px",
-        padding: "30px",
-        background: "linear-gradient(135deg, #667eea, #764ba2)",
-        minHeight: "100vh",
-        marginTop: "20px"
-      }}
-    >
-      {students.map((stud) => (
-        <div
-          key={stud.id}
-          style={{
-            background: "#fff",
-            padding: "20px",
-            borderRadius: "15px",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-            transition: "0.3s",
-            cursor: "pointer"
-          }}
-          onMouseOver={(e) =>
-            (e.currentTarget.style.transform = "scale(1.05)")
-          }
-          onMouseOut={(e) =>
-            (e.currentTarget.style.transform = "scale(1)")
-          }
-        >
-          <h2 style={{ marginBottom: "10px", color: "#333" }}>
-            {stud.name}
-          </h2>
-
-          <p style={{ margin: "5px 0", color: "#555" }}>
-            🎂 Age: {stud.age}
-          </p>
-
-          <p style={{ margin: "5px 0", color: "#777" }}>
-            🎓 Course: {stud.course}
-          </p>
+    <div style={{display:"flex", marginTop:"20px"}}>
+      {students.map( (stud)=>(
+        <div style={{display:"grid",border:"2px solid red", padding:"20px", margin:"10px", borderRadius:"20px"}}>
+        <h1>{stud.name}</h1>
+        <h2>{stud.age}</h2>
+        <h2>{stud.course}</h2>
         </div>
-      ))}
+      ) )}
     </div>
-  );
+  )
 }
-
-export default DisplayElmt;
+export default DisplayElmt
