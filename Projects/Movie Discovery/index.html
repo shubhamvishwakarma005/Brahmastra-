@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie-discovery</title>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero">
+            <h1>movie-discovery</h1>
+            <div class="nav">
+
+                <section id="nav-inputs">
+                    <input type="text" id="search-bar" placeholder="Search movies..." aria-label="Search for movies">
+
+                    <div id="filters">
+
+                        <select id="genre-filter">
+                            <option value="">Genre</option>
+                            <option value="28">Action</option>
+                            <option value="35">Comedy</option>
+                            <option value="18">Drama</option>
+                        </select>
+
+                        <select id="year-filter">
+                            <option value="">Release Year</option>
+                            <option value="Before-2020">Before-2020</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+
+                    </div>
+
+                    <button id="search-btn">Search</button>
+                </section>
+
+            </div>
+
+
+            <div class="movie-container"></div>
+
+
+        </div>
+    </div>
+
+
+    <script src="APIdata.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
