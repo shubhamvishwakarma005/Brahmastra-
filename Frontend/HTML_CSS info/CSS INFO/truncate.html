@@ -7,7 +7,8 @@
     <title>truncate!</title>
 
     <style>
-        h1 {
+        /*single-line truncate 
+         h1 {
             width: 200px;
             white-space: nowrap;
             overflow: hidden;
@@ -17,16 +18,27 @@
 
         h1:hover {
             overflow: visible;
-        }
+        } */
 
+
+        /* multi-line truncate  */
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     </style>
 
 </head>
 
 <body>
-    <h1> Hello, this is a very very very very very very very very long truncate text example that should definitely
+    <!-- <h1> Hello, this is a very very very very very very very very long truncate text example that should definitely
         overflow
-    </h1>
+    </h1> -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam ad magni saepe, ex laborum consequatur maiores ab molestiae, vero incidunt illum rerum pariatur soluta? Facilis similique tempora, consectetur neque asperiores delectus sequi ipsa nisi maiores, in assumenda deleniti deserunt optio eaque explicabo maxime laudantium iste quo placeat beatae perferendis. Fugit accusantium sit ratione sunt hic obcaecati aliquam dignissimos repellat, ex amet corrupti doloribus quas nobis impedit provident reprehenderit omnis eos error nam! Officiis iste sed reprehenderit, minima distinctio accusantium odit, porro quos, at vel necessitatibus eligendi quasi provident! Praesentium omnis fugiat ut animi eaque inventore ratione doloribus labore. Nostrum, itaque dolores! Accusantium itaque consectetur perspiciatis. Doloremque repellat doloribus harum voluptatem quis nemo. Recusandae id sed minus vero reprehenderit fugit, voluptates placeat laboriosam velit cum excepturi aut nihil quo corporis dolorum repudiandae saepe, facilis et! Quo, libero quod! Non dicta assumenda neque? Commodi quisquam molestias possimus, iusto sit velit tenetur provident hic! Nulla commodi fuga animi facilis, incidunt earum ipsa nisi nobis ut vero delectus, fugit dolorum ullam quae reiciendis! Sapiente accusamus deleniti, maxime ullam excepturi recusandae nisi doloribus obcaecati?</p>
+
 </body>
 
 </html>
