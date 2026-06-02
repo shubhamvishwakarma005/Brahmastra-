@@ -64,7 +64,7 @@ function Navbar() {
             <select
               className="px-4 py-3 rounded-2xl bg-slate-100 text-black outline-none focus:ring-2 focus:ring-sky-400 shadow-md cursor-pointer"
             >
-              <option value="">⭐ Rating</option>
+              <option value="">Rating</option>
               <option value="9">9+</option>
               <option value="8">8+</option>
               <option value="7">7+</option>
