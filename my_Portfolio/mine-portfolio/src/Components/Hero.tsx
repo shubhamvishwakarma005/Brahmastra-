@@ -1,9 +1,15 @@
+import Profileinfo from "./Profileinfo"
+
+
 
 function Hero() {
   return (
-    <main>
-        <h1>hero</h1>
-    </main>
+     <main>
+        <div>
+         <Profileinfo />
+        </div>
+        
+     </main>
   )
 }
 
