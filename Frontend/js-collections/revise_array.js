@@ -1,49 +1,72 @@
 const names = ["arjun", "bheem", "yudhisthir", "karn"]
+// console.log(names)
 
-const empty = Array(3)
+// Empty Arr 
+const EmptyArr = Array(3)
+// console.log(EmptyArr)
 
-const element = Array("mars", "earth", "saturn", "venus")
+// Array With elemets and empty arr 
+const Elements = Array("bhu", "jnu", "MU", "DL", Element[4])
+// console.log(Elements);
+// console.log(Elements.length)
+
+const Arr = ["BHU", "JNU", "MU", "DL","VBU","IIT","NIT"]
+// console.log(Arr.length)
 
 const no = Array.of(3, "numbers")
+// console.log(no)
 
-const train = Array.from('VANDE-BHARAT')
+const num = Array.from({length:3})
+// console.log(num)
+
+const nooms =[...Array(5).keys()]
+// console.log(nooms) // keys 
+
+const nums =[...Array(3).values()]
+// console.log(nums) // values
 
 // truncate array in JavaScript 
+// Truncate an array means to reduce its length by removing elements from the end.
 const alpha = ["A", "B", "C", "D", "E"]
 alpha.length = 3
+// console.log(alpha)
+
 alpha.length = 8
+// console.log(alpha)
 
 
-// mutate array 
+// Mutate Array 
+
+// convert string into array 
+const train = Array.from('VANDE-BHARAT')
+// console.log(train)
+
+// array input and delete
 const instrumnet = Array.of()
+// console.log(instrumnet)
 instrumnet.unshift('pencil')
+// console.log(instrumnet)
 instrumnet.shift()
+// console.log(instrumnet)
 instrumnet.push('pen')
+// console.log(instrumnet)
 instrumnet.pop()
+// console.log(instrumnet)
 
 const elem = Array.from('PENCILS')
-elem.slice(1, 3)  // non - mutate
-elem.splice(1, 3)  //  mutate array
+// console.log(elem)
+// console.log(elem.slice(1, 3))  // non - mutate
+// console.log(elem.splice(1, 3)) //  mutate array
 
 
-// SEARCHING ARRAY 
-// indexof , includes, find, findIndex
+// To check Array 
+// console.log(Array.isArray(names)) 
 
-// check array 
-Array.isArray()
-
-console.log();
-
-
-// KEY POINTS 
-// array is 0 based 
-// mutate method :- push, pop, shift, unshift, splice
-// non-mutate method :- slice, flat, concat, flatmap
-// searching :- includes, findIndex, indexOf
-// check array :- ARRAY.isArray()
-
-
-// **************************OPERATIONS**********************************
+const Arre =["pencil", "notebook", "pen", "ink"]
+// console.log(Arre.indexOf("pen"))
+// console.log(Arre.includes("pen"))
+// console.log(Arre.find((elem)=> elem === "zero" ))
+// console.log(Arre.findIndex((elem)=> elem === "pen"))
 
 const order = [
     { dish: "pasta", price: 399, qty: 4 , spicy:true},
