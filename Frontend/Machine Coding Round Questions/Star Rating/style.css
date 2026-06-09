@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: aliceblue;
+}
+
+.main{
+    width: 100%;
+    text-align: center;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fa-star{
+    font-size: 32px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
