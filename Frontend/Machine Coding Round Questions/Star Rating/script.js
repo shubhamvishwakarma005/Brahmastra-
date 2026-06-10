@@ -1,29 +1,24 @@
-const inputStar = document.getElementsByClassName("fa-star")
+const Stars = document.getElementsByClassName('fa-star')
 
-
-function StarPaint() {
+function StarRating() {
 
     let input = null;
 
-    for (let star of inputStar) {
+    for (let values of Stars) {
+        values.addEventListener('click', (e) => {
+            input = Number(e.target.dataset.rating)
+            // console.log(input)
 
-        star.addEventListener('click', (e) => {
-            input = Number(e.target.dataset.rating, 10)
-            console.log(input)
-
-
-
-            for (let str of inputStar) {
-                if (Number(str.dataset.rating) <= input) {
-                    str.style.color = "gold"
+            for(let star of Stars){
+                if(Number(star.dataset.rating) <= input){
+                    star.style.color = "gold"
                 }else{
-                    str.style.color = "white"
+                    star.style.color = "white"
                 }
             }
-
         })
     }
 
 }
 
-StarPaint()
+StarRating()
