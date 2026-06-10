@@ -1,25 +1,25 @@
-const tabs = document.getElementById('list')
-const childs = [...tabs.children]
+const navs = document.getElementById('list')
+const tabs = [...navs.children]
+const sections = document.querySelectorAll('section')
 
-const section = document.querySelectorAll('section')
 
+function TabComponents(){
 
-let chooseTab = null;
+    let inputs = null;
 
-function TabComponents() {
+    for(let tab of tabs){
+        tab.addEventListener('click', (e)=>{
+            inputs = e.target.dataset.tab
+            
+            for(let section of sections){
+                if(section.id === inputs){
+                    section.style.display = "block"
+                }else{
+                    section.style.display = "none"
+                }
 
-    for (let tab of childs) {
-         tab.addEventListener('click', (e) => {
-           chooseTab = e.target.dataset.tab
-
-           for(let sec  of section){
-            if(sec.id === chooseTab){
-                sec.style.display = "block"
-            }else{
-                sec.style.display = "none"
             }
             
-           }
         })
     }
 }
