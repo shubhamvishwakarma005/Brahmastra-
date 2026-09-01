@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab-Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 id="heading">state tab Components !</h1>
+        <div class="hero">
+
+            <nav id="nav-bar">
+                <ul id="list">
+                    <li data-tab="home">Home</li>
+                    <li data-tab="about">About</li>
+                    <li data-tab="contact">Contact</li>
+                </ul>
+            </nav>
+
+            <section id="home">
+                <h1>Home</h1>
+            </section>
+
+            <section id="about">
+                <h1>About</h1>
+            </section>
+
+            <section id="contact">
+                <h1>Contact</h1>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+
+        let lists = document.getElementById('list')
+        const list = [...lists.children]
+        const sections = document.querySelectorAll('section')
+
+        let setList = 0;
+
+        function listSet() {
+
+            for (let lst of list) {
+                const tabValue = lst.dataset.tab
+
+                if(tabValue <= setList){
+                    sections.style.display = "block"
+                }else{
+                    sections.style.display = "none"
+                }
+            }
+
+        }
+
+
+
+        function Tabset(){
+
+            for(let lst of list){
+                lst.addEventListener('click', (e)=>{
+                    setList = e.target.dataset.tab; 
+                     listSet()
+                })
+            }
+
+             listSet()
+        }
+
+
+        listSet()
+        Tabset()
+
+    </script>
+</body>
+
+</html>

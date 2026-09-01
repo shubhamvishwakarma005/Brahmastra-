@@ -32,6 +32,8 @@ let score = null;
 
 // **************** Non - Primitive *********************
 
+
+
 // Object 
 const Car = {
     name: "Maruti Suzuki",

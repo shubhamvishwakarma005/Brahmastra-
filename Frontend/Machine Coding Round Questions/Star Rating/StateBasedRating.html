@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>state-based-star-rating</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="main">
+        <h1>Star Rating</h1>
+        <div class="hero">
+            <div class="div">
+                <i class="fa-solid fa-star" id="one" data-rating="1"></i>
+                <i class="fa-solid fa-star" id="two" data-rating="2"></i>
+                <i class="fa-solid fa-star" id="three" data-rating="3"></i>
+                <i class="fa-solid fa-star" id="four" data-rating="4"></i>
+                <i class="fa-solid fa-star" id="five" data-rating="5"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.getElementsByClassName('fa-star')
+
+        let setStar = 0;
+
+        function renderStar() {
+
+            for (let star of stars) {
+                let starss = Number(star.dataset.rating)
+
+                if (starss <= setStar) {
+                    star.style.color = "pink"
+                } else {
+                    star.style.color = "white"
+                }
+
+
+            }
+
+        }
+
+
+        function starRating(){
+
+            for(let star of stars){
+               star.addEventListener('click', (e)=>{
+                  setStar =  e.target.dataset.rating
+                   renderStar()
+
+                })
+
+            }
+
+             renderStar()
+
+        }
+
+
+
+            renderStar()
+            starRating()
+
+    </script>
+</body>
+
+</html>
