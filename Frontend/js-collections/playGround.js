@@ -130,9 +130,14 @@ const user_info = {
 // console.log(user_info.hasOwnProperty('email'))
 
 for(let keys in user_info){
-    console.log(user_info[keys])
+    // console.log(`key: ${keys}`)
 }
 
 for(let value in user_info){
-    console.log(user_info[value])
+    // console.log(`values: ${user_info[value]}`)
 }
+
+for(const [keys , value] of Object.entries(user_info)){
+    // console.log(`key: ${keys} : value:${value}`)
+}   
+
