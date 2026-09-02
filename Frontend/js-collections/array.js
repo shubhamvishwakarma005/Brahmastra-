@@ -32,7 +32,6 @@ elem.splice(1, 3)  //  mutate array
 // check array 
 Array.isArray()
 
-console.log();
 
 
 // KEY POINTS 
@@ -61,6 +60,7 @@ order.forEach( (order, index)=>{
 // map( )
 const myDish = order.map((ord)=>(`I Ordered ${ord.qty} ${ord.dish}`))
 // console.log(myDish) // array []
+
 
 // filter()
 const dishPrice = order.filter((ord)=>(ord.price >= 200 ))
