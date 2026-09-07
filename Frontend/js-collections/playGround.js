@@ -240,3 +240,86 @@ const sharma_sell = [["Sarso-da-saag " , "Makke-di-roti"], "Panjabi Style"]
 // bind return new function
 const check_order = food_order.bind(gupta_ji, "Paneer Kofta", "Desi Style")
 // console.log(check_order())
+
+
+// ********************************************************************************************
+// new 
+// steps :  {} create empty object 
+// step2 : link empty object prototype to function (TataCar) prototype 
+// step3 : this, bind value to called function
+// step4 : new , explicit return value which call the function
+
+// type 1
+// everyone share same memory 
+function TataCar(chesis, model, fuel){ 
+    this.chesis = chesis;
+    this.model = model;
+    this.fuel = fuel;
+}
+
+TataCar.prototype.status = function(){
+    return `Car ${this.model} || ${this.chesis} || ${this.fuel}`
+}
+
+const car1 = new TataCar('MH46-01', "Safari", "75%")
+// console.log(car1)
+
+// type 2
+// Factory function  : everyone has its own memory 
+
+function MahindraCar(car_code, route){
+    return{
+        car_code,
+        route,
+        run(){
+            return `${this.car_code} runs ${this.route}`
+        }
+    }
+}
+
+const vehical1 = MahindraCar('JH-01', "Ranchi-Dhanbad")
+// console.log(vehical1.run())
+
+
+// ********************************************************************************************
+// prototype 
+
+const prithivaj = {
+    name:"Prithivi Raj",
+    generation:"Grand Father",
+    welth:'5cr',
+    dish(){
+        return `${this.name} cooks famous Family Dish`
+    }
+}
+// console.log(prithivaj.dish())
+
+
+const raj = Object.create(prithivaj)
+raj.name = "raj";
+raj.generation = "Father";
+raj.runBusiness = function(){
+    return `${this.name} runs movie production business`
+}
+// console.log(raj.dish())
+
+
+const ranbir = Object.create(raj)
+ranbir.name = "ranbir kapoor";
+ranbir.generation = "son";
+ranbir.welth = '200cr';
+ranbir.work = function(){
+    return `${this.name} is a hero of bollywood movies`
+}
+// console.log(ranbir.work())
+// console.log(ranbir.dish())
+
+
+// ********************************************************************************************
+// polyfills 
+
+// let nme = [2,5,8,9]
+
+// pollyfill lib 
+// forEach, map(), reduce()
+
