@@ -323,3 +323,65 @@ ranbir.work = function(){
 // pollyfill lib 
 // forEach, map(), reduce()
 
+// const num = [2,8,9,8,3]
+// console.log(num)
+
+// Array.prototype.map = function(){
+//     this.map
+// }
+
+// ********************************************************************************************
+
+// callback function 
+
+const num = [2,8,9,8,3]
+
+// forEach : only loop 
+const check =  num.forEach((no) => {
+        // console.log(no)
+})
+// console.log(check)
+// console.log(check === undefined)
+
+
+// map() → transform each element and return a new array.
+const test = num.map((no) => {
+   return no + 5;
+})
+// console.log(test)
+
+
+// filter() is an array method that checks each element against a condition and returns a new array containing only the elements for which the condition returns true.
+const target = num.filter((no) =>{
+    return no > 5
+})
+// console.log(target)
+
+
+// find : callback searches for the first matching element
+const search = num.find((no)=>{
+   return no === 9;
+})
+// console.log(search)
+
+
+//  some → callback checks whether at least one matches
+const many = num.some((no)=>{
+    return no ===8
+})
+// console.log(many)
+
+// every → callback checks whether all match
+const more = num.every((no)=>{
+    return no === 8
+})
+// console.log(more)
+
+// 1. forEach → callback executes for every element
+// 2. map → callback transforms every element
+// 3. filter → callback decides which elements to keep
+// 4. find → callback searches for the first matching element
+// 5. some → callback checks whether at least one matches
+// 6. every → callback checks whether all match
+// 7. reduce → callback accumulates values into one result
+
